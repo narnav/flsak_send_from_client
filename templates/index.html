@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}Car List{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Available Cars</h1>
+        <ul>
+            {% for car in cars %}
+            <li>
+                <i class="fas fa-car icon"></i>
+                <span class="car-name">{{ car.name }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endblock %}
